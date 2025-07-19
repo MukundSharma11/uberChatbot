@@ -1,1 +1,1 @@
- This project contains 3 vesions of the Chatbot.
+ This project contains 3 versions of the Chatbot.

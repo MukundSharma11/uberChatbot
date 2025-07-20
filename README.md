@@ -32,12 +32,12 @@ If you prefer not to use a .env file, you can pass keys directly when running th
 
 From your project root (where your Dockerfile is located), run:
 
-docker build -t uber-chatbot:latest .
+docker build -t mukki11/chatbot:latest .
 
 ## 4️⃣ Run the Docker Container
 ### ✅ Using .env file:
 
-docker run --rm --env-file .env uber-chatbot:latest
+docker run --rm --env-file .env mukki11/chatbot:latest
 
 ### ✅ Or, Passing Keys Directly:
 
@@ -49,7 +49,7 @@ docker run --rm \
   
   -e LANGSMITH_API_KEY=your_langsmith_key_here \
   
-  uber-chatbot:latest
+  mukki11/chatbot:latest
 
 ## 5️⃣ Project Output
 

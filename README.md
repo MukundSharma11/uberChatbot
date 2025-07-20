@@ -30,9 +30,14 @@ LANGSMITH_API_KEY=your_langsmith_key_here (Optional)
 
 ### 3️⃣ Pull the Docker Image
 
+In your terminal or Docker CLI
+
 docker pull mukki11/chatbot
 
 ### 4️⃣ Run the Docker Container
+
+In your terminal or Docker CLI
+
 #### ✅ Passing Keys Directly (Recommended): 
 
 docker run --rm -it \

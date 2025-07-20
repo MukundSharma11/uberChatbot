@@ -12,7 +12,11 @@ TAVILY_API_KEY (Optional)
 LANGSMITH_API_KEY (Optional)
 
 ## 2️⃣ Prepare Your Environment Variables
-### Option A: Using a .env File (Recommended)
+### Option A: Pass API Keys Directly at Runtime (Recommended)
+
+If you prefer not to use a .env file, you can pass keys directly when running the container.
+
+### Option B: Using a .env File
 
 Create a .env file (in the same directory as your Dockerfile).
 
@@ -24,10 +28,6 @@ TAVILY_API_KEY=your_tavily_key_here (Optional)
 
 LANGSMITH_API_KEY=your_langsmith_key_here (Optional)
 
-### Option B: Pass API Keys Directly at Runtime
-
-If you prefer not to use a .env file, you can pass keys directly when running the container.
-
 ## 3️⃣ Build the Docker Image
 
 From your project root (where your Dockerfile is located), run:
@@ -35,13 +35,9 @@ From your project root (where your Dockerfile is located), run:
 docker build -t mukki11/chatbot:latest .
 
 ## 4️⃣ Run the Docker Container
-### ✅ Using .env file:
-
-docker run --rm --env-file .env mukki11/chatbot:latest
-
 ### ✅ Or, Passing Keys Directly:
 
-docker run --rm \
+docker run --rm -it \
 
   -e GROQ_API_KEY=your_groq_key_here \
   
@@ -50,6 +46,10 @@ docker run --rm \
   -e LANGSMITH_API_KEY=your_langsmith_key_here \
   
   mukki11/chatbot:latest
+
+### ✅ Or, Using .env file:
+
+docker run --rm -it --env-file .env mukki11/chatbot:latest
 
 ## 5️⃣ Project Output
 

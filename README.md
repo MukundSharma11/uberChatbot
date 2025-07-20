@@ -61,22 +61,6 @@ CMD ["python", "main.py"]
 
 # 🚖 Agentic Uber Chatbot
 
-✅ Alternative (Cleaner) Approach Using .env File:
-Create a local .env file (host machine, not inside image):
-
-ini
-Copy
-Edit
-GROQ_API_KEY=your_groq_key_here
-TAVILY_API_KEY=your_tavily_key_here
-LANGSMITH_API_KEY=your_langsmith_key_here
-Run the container like this:
-
-bash
-Copy
-Edit
-docker run --rm --env-file .env uber-chatbot:latest
-
 A modular, LLM-driven conversational agent for simulating Uber-like ride operations—booking rides, cancellations with fee adjudication, active ride management, and query resolution. Built using LangGraph, LangChain, OpenAI LLMs, and a RAG pipeline.
 
 ---

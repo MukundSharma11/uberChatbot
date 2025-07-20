@@ -3,7 +3,7 @@
 
 Ensure Docker is installed on your system.
 
-You must have your own API keys for:
+You must have your own API keys for (All are free and available at respective websites): 
 
 GROQ_API_KEY (Required)
 
@@ -14,11 +14,11 @@ LANGSMITH_API_KEY (Optional)
 ### 2️⃣ Prepare Your Environment Variables
 #### Option A: Pass API Keys Directly at Runtime (Recommended)
 
-If you prefer not to use a .env file, you can pass keys directly when running the container.
+If you prefer not to use a .env file, you can pass keys directly when running the container. Command mentioned in the 4th step.
 
 #### Option B: Using a .env File
 
-Create a .env file (in the same directory as your Dockerfile).
+Create a .env file (in the same directory as your Dockerfile). Command mentioned in the 4th step.
 
 Add your API keys like this:
 
@@ -28,14 +28,12 @@ TAVILY_API_KEY=your_tavily_key_here (Optional)
 
 LANGSMITH_API_KEY=your_langsmith_key_here (Optional)
 
-### 3️⃣ Build the Docker Image
+### 3️⃣ Pull the Docker Image
 
-From your project root (where your Dockerfile is located), run:
-
-docker build -t mukki11/chatbot:latest .
+docker pull mukki11/chatbot
 
 ### 4️⃣ Run the Docker Container
-#### ✅ Or, Passing Keys Directly:
+#### ✅ Passing Keys Directly (Recommended): 
 
 docker run --rm -it \
 
@@ -50,12 +48,6 @@ docker run --rm -it \
 #### ✅ Or, Using .env file:
 
 docker run --rm -it --env-file .env mukki11/chatbot:latest
-
-### 5️⃣ Project Output
-
-Once running, your project will execute using:
-
-CMD ["python", "main.py"]
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 

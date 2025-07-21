@@ -48,6 +48,10 @@ This project implements an **agentic framework** to automate ride management tas
 - System prompts guide the LLM’s decision-making across steps.
 - Once user goals are achieved, control returns to the end node
 
+<p align="center">
+  <img src="Images/Agentic Architecture.png" alt="ReAct Agent" width="500"/>
+</p>
+
 ### ➤ 2. Workflow Orchastrator
 - Implemented a Workflow Orchestrator using LangGraph, where nodes represent sequential or conditional actions forming a deterministic flow.
 - LLM was only involved in the RAG pipeline.
@@ -55,6 +59,10 @@ This project implements an **agentic framework** to automate ride management tas
 - The control flow is explicitly hardcoded using LangGraph edges.
 - Designed for structured, rule-based task execution where operations must follow a predefined sequence.
 - Suitable for automated processes where conversational or reasoning abilities are unnecessary.
+
+<p align="center">
+  <img src="Images/Workflow Architecture.png" alt="Workflow Orchastrator" width="500"/>
+</p>
 
 ---
 
@@ -74,6 +82,12 @@ This project implements an **agentic framework** to automate ride management tas
   - Rider/driver ratings
   - Historical cancellation rates
   - Other transactional factors
+ 
+<p align="center">
+  <img src="Images/Driver Cluster.png" alt="Driver Cluster" width="500"/>
+  <img src="Images/Rider Cluster 1.png" alt="Rider Cluster" width="500"/>
+</p>
+
 
 #### 📍 Active Bookings Tool
 - Fetches and lists active rides from a JSON-based booking datastore.
@@ -94,6 +108,10 @@ This project implements an **agentic framework** to automate ride management tas
 - Created realistic synthetic datasets using probabilistic sampling:
 - **Skewed normal** and **gamma** distributions.
 - Simulated user-driver behaviors for training the cancellation fee K-Means model.
+
+<p align="center">
+  <img src="Images/Ratings Sampling.png" alt="Ratings Distribution" width="500"/>
+</p>
 
 ---
 

@@ -5,7 +5,10 @@
 
 # 🚖 Agentic Uber Chatbot
 
-A modular, LLM-driven conversational agent for simulating Uber-like ride operations—booking rides, cancellations with fee adjudication, active ride management, and query resolution. Built using LangGraph, LangChain, OpenAI LLMs, and a RAG pipeline.
+### A modular, LLM-driven conversational agent for simulating Uber-like ride operations—booking rides, cancellations with fee adjudication, active ride management, and query resolution. Built using LangGraph, LangChain, Groq LLMs, and a RAG pipeline. Debugged and monitored using Langsmith. Pydantic Data Validation. 3 Versions of the project were made. Multiple versions were designed:
+### - Agentic V1: ReAct agent with LangGraph orchestrating LLM-bound tools.
+### - Agentic V2: Manual tool triggering via LLM instructions.
+### - Workflow: LangGraph nodes and edges define conversation flow and decision points.
 
 ---
 
@@ -16,11 +19,6 @@ This project implements an **agentic framework** to automate ride management tas
 - Ride cancellations with automated fee decisions
 - Listing active bookings
 - Contextual question-answering using a Retrieval-Augmented Generation (RAG) pipeline
-
-Multiple versions were designed:
-- **Agentic V1**: ReAct agent with LangGraph orchestrating LLM-bound tools.
-- **Agentic V2**: Manual tool triggering via LLM instructions (under development).
-- **Workflow**: LangGraph nodes and edges define conversation flow and decision points.
 
 ---
 

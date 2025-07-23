@@ -11,7 +11,7 @@ GROQ_API_KEY
 
 In your terminal or Docker CLI
 
-docker pull mukki11/chatbot
+docker pull mukki11/chatbot:latestV2
 
 ## 3️⃣ Run the Docker Container
 
@@ -21,13 +21,11 @@ In your terminal or Docker CLI
 
 docker run --rm -it \
 
-  -v $(pwd)/data:/app/data \
-
   -e GROQ_API_KEY=your_groq_key_here \
   
-  mukki11/chatbot:latest
+  mukki11/chatbot:latestV2
 
-### ✅ Or, Using .env file:
+### Or, Using .env file:
 
 Create a .env file (in the same directory as your Dockerfile). Command mentioned in the 4th step.
 
@@ -41,6 +39,4 @@ docker run --rm -it \
 
   --env-file .env \
   
-  -v $(pwd)/data:/app/data \
-  
-  mukki11/chatbot:latest
+  mukki11/chatbot:latestV2

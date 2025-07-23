@@ -21,6 +21,8 @@ In your terminal or Docker CLI
 
 docker run --rm -it \
 
+  -v $(pwd)/data:/app/data \
+
   -e GROQ_API_KEY=your_groq_key_here \
   
   mukki11/chatbot:latest
@@ -35,4 +37,10 @@ GROQ_API_KEY=your_groq_key_here
 
 and then run this command
 
-docker run --rm -it --env-file .env mukki11/chatbot:latest
+docker run --rm -it \
+
+  --env-file .env \
+  
+  -v $(pwd)/data:/app/data \
+  
+  mukki11/chatbot:latest
